@@ -33,5 +33,9 @@
   },
   "devDependencies": {
     "release-it": "^14.11.8"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
