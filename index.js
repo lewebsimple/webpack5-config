@@ -80,6 +80,9 @@ module.exports = {
   },
 
   resolve: {
+    alias: {
+      vue: 'vue/dist/vue.min.js',
+    },
     extensions: ['.js', '.ts', '.vue'],
   },
 
@@ -119,8 +122,6 @@ module.exports = {
       },
     },
   },
-
-  devtool: mode === 'development' ? 'source-map' : false,
 
   performance: { hints: false, maxAssetSize: 8388608 },
 
