@@ -7,6 +7,9 @@
     "index.js"
   ],
   "license": "MIT",
+  "scripts": {
+    "release": "release-it"
+  },
   "dependencies": {
     "@swc/core": "^1.2.126",
     "browser-sync": "^2.27.7",
@@ -27,5 +30,8 @@
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^5.65.0"
+  },
+  "devDependencies": {
+    "release-it": "^14.11.8"
   }
 }
