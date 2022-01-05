@@ -27,8 +27,10 @@ module.exports = {
       // Fonts
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        loader: 'file-loader',
-        options: { name: 'fonts/[name].[ext]' },
+        type: 'asset/resource',
+        generator: {
+            filename: './fonts/[name][ext]',
+        },
       },
 
       // Images
