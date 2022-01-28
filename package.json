@@ -1,7 +1,7 @@
 {
   "name": "@lewebsimple/webpack5-config",
   "description": "Webpack5 configuration defaults",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "index.js",
   "files": [
     "index.js"
