@@ -17,7 +17,7 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { sourceMap: true, url: false, importLoaders: 3 } },
+          { loader: 'css-loader', options: { sourceMap: true, importLoaders: 3 } },
           { loader: 'postcss-loader', options: { sourceMap: true } },
           { loader: 'resolve-url-loader', options: { sourceMap: true } },
           { loader: 'sass-loader', options: { sourceMap: true } },
@@ -36,8 +36,10 @@ module.exports = {
       // Images
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
-        loader: 'file-loader',
-        options: { name: 'images/[name].[ext]' },
+        type: 'asset/resource',
+        generator: {
+          filename: './images/[name].[ext]',
+        },
       },
 
       // Inline SVG
@@ -49,8 +51,10 @@ module.exports = {
             use: ['swc-loader', 'vue-svg-loader'],
           },
           {
-            loader: 'file-loader',
-            options: { name: 'images/[name].[ext]' },
+            type: 'asset/resource',
+            generator: {
+              filename: './images/[name].[ext]',
+            },
           },
         ],
       },
